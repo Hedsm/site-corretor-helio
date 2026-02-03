@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Card, CardContent } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
+// Card components replaced
+// Button component replaced
 import { Bed, Bath, Maximize, MapPin, Building2, Calendar, Construction, X } from 'lucide-react';
 
 const properties = [
@@ -69,14 +69,14 @@ export default function PropertiesSection() {
               whileHover={{ y: -10 }}
               transition={{ duration: 0.3 }}
             >
-              <Card className="overflow-hidden border-none shadow-lg h-full flex flex-col">
+              <div className="overflow-hidden border-none shadow-lg h-full flex flex-col">
                 <div className="relative h-64">
                   <img src={property.image} alt={property.title} className="w-full h-full object-cover" />
                   <div className="absolute top-4 right-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-bold">
                     {property.status}
                   </div>
                 </div>
-                <CardContent className="p-6 flex-1 flex flex-col">
+                <divContent className="p-6 flex-1 flex flex-col">
                   <div className="flex items-center text-gray-500 text-sm mb-2">
                     <MapPin className="w-4 h-4 mr-1" />
                     {property.location}
@@ -95,11 +95,11 @@ export default function PropertiesSection() {
                     ))}
                   </div>
 
-                  <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white">
+                  <button className="w-full bg-blue-600 hover:bg-blue-700 text-white">
                     Ver Detalhes
-                  </Button>
-                </CardContent>
-              </Card>
+                  </button>
+                </div>
+              </div>
             </motion.div>
           ))}
         </div>

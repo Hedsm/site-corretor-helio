@@ -1,11 +1,11 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Label } from '@/components/ui/label';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+// Button component replaced
+// Input component replaced
+// Textarea component replaced
+// Label component replaced
+// Select components removed
 import { Phone, Clock, MapPin } from 'lucide-react';
 import { toast } from 'sonner';
 import { client } from '@/lib/api';
@@ -96,8 +96,8 @@ export default function ContactSection() {
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <Label htmlFor="name">Nome Completo</Label>
-                  <Input
+                  <label htmlFor="name">Nome Completo</label>
+                  <input
                     id="name"
                     required
                     value={formData.name}
@@ -106,8 +106,8 @@ export default function ContactSection() {
                   />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="phone">Telefone / WhatsApp</Label>
-                  <Input
+                  <label htmlFor="phone">Telefone / WhatsApp</label>
+                  <input
                     id="phone"
                     required
                     value={formData.phone}
@@ -117,8 +117,8 @@ export default function ContactSection() {
                 </div>
               </div>
               <div className="space-y-2">
-                <Label htmlFor="email">E-mail</Label>
-                <Input
+                <label htmlFor="email">E-mail</label>
+                <input
                   id="email"
                   type="email"
                   required
@@ -128,24 +128,24 @@ export default function ContactSection() {
                 />
               </div>
               <div className="space-y-2">
-                <Label htmlFor="interest">Interesse</Label>
-                <Select
+                <label htmlFor="interest">Interesse</label>
+                 <div
                   onValueChange={(value) => setFormData({ ...formData, propertyInterest: value })}
                 >
-                  <SelectTrigger>
-                    <SelectValue placeholder="Selecione o tipo de imóvel" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="apartamento">Apartamento</SelectItem>
-                    <SelectItem value="casa">Casa Verde e Amarela</SelectItem>
-                    <SelectItem value="terreno">Terreno / Loteamento</SelectItem>
-                    <SelectItem value="comercial">Comercial</SelectItem>
-                  </SelectContent>
-                </Select>
+                   <divTrigger>
+                     <divValue placeholder="Selecione o tipo de imóvel" />
+                   </div>
+                   <divContent>
+                     <divItem value="apartamento">Apartamento </div>
+                     <divItem value="casa">Casa Verde e Amarela </div>
+                     <divItem value="terreno">Terreno / Loteamento </div>
+                     <divItem value="comercial">Comercial </div>
+                   </div>
+                 </div>
               </div>
               <div className="space-y-2">
-                <Label htmlFor="message">Mensagem (Opcional)</Label>
-                <Textarea
+                <label htmlFor="message">Mensagem (Opcional)</label>
+                <textarea
                   id="message"
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
@@ -153,13 +153,13 @@ export default function ContactSection() {
                   rows={4}
                 />
               </div>
-              <Button
+              <button
                 type="submit"
                 className="w-full bg-blue-600 hover:bg-blue-700 text-white py-6 text-lg"
                 disabled={isSubmitting}
               >
                 {isSubmitting ? 'Enviando...' : 'Solicitar Consultoria Gratuita'}
-              </Button>
+              </button>
             </form>
           </motion.div>
         </div>

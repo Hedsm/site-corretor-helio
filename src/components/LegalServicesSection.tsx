@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Card, CardContent } from '@/components/ui/card';
+// Card components replaced
 import { ChevronDown, Scale, FileText, Shield, Building2, Landmark, Briefcase, Award, UserCheck } from 'lucide-react';
 
 const legalServices = [
@@ -54,8 +54,8 @@ export default function LegalServicesSection() {
               animate={inView ? { opacity: 1, x: 0 } : {}}
               transition={{ delay: index * 0.2 }}
             >
-              <Card className="border-none shadow-lg h-full">
-                <CardContent className="p-8">
+              <div className="border-none shadow-lg h-full">
+                <divContent className="p-8">
                   <div className="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center mb-6">
                     <service.icon className="w-8 h-8 text-blue-600" />
                   </div>
@@ -68,8 +68,8 @@ export default function LegalServicesSection() {
                       </li>
                     ))}
                   </ul>
-                </CardContent>
-              </Card>
+                </div>
+              </div>
             </motion.div>
           ))}
         </div>

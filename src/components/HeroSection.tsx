@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Button } from '@/components/ui/button';
+// Button component replaced
 import { Menu, Phone } from 'lucide-react';
 
 export default function HeroSection() {
@@ -35,14 +35,14 @@ export default function HeroSection() {
               <a href="#services" className="text-gray-600 hover:text-blue-600 transition-colors">Serviços</a>
               <a href="#testimonials" className="text-gray-600 hover:text-blue-600 transition-colors">Depoimentos</a>
               <a href="#properties" className="text-gray-600 hover:text-blue-600 transition-colors">Imóveis</a>
-              <Button onClick={scrollToContact} variant="primary">Contato</Button>
+              <button onClick={scrollToContact} variant="primary">Contato</button>
             </nav>
 
             {/* Mobile Menu Button */}
             <div className="md:hidden">
-              <Button onClick={() => setMenuOpen(!menuOpen)} variant="ghost" size="icon">
+              <button onClick={() => setMenuOpen(!menuOpen)} variant="ghost" size="icon">
                 <Menu className="h-6 w-6" />
-              </Button>
+              </button>
             </div>
           </div>
         </div>
@@ -58,7 +58,7 @@ export default function HeroSection() {
               <a href="#services" onClick={() => setMenuOpen(false)} className="text-gray-600 hover:text-blue-600 transition-colors">Serviços</a>
               <a href="#testimonials" onClick={() => setMenuOpen(false)} className="text-gray-600 hover:text-blue-600 transition-colors">Depoimentos</a>
               <a href="#properties" onClick={() => setMenuOpen(false)} className="text-gray-600 hover:text-blue-600 transition-colors">Imóveis</a>
-              <Button onClick={() => { scrollToContact(); setMenuOpen(false); }} variant="primary">Contato</Button>
+              <button onClick={() => { scrollToContact(); setMenuOpen(false); }} variant="primary">Contato</button>
             </nav>
           </motion.div>
         )}
@@ -87,10 +87,10 @@ export default function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
         >
-          <Button onClick={openWhatsApp} size="lg" className="bg-green-500 hover:bg-green-600 text-white">
+          <button onClick={openWhatsApp} size="lg" className="bg-green-500 hover:bg-green-600 text-white">
             <Phone className="mr-2 h-5 w-5" />
             Simulação Gratuita no WhatsApp
-          </Button>
+          </button>
         </motion.div>
       </div>
 

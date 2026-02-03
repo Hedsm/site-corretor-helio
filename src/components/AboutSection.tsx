@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Card, CardContent } from '@/components/ui/card';
+// Card components replaced
 import { CheckCircle, Users, Shield, Building, TrendingUp, Award } from 'lucide-react';
 
 const skills = [
@@ -62,15 +62,15 @@ export default function AboutSection() {
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: index * 0.1 }}
             >
-              <Card className="border-none shadow-md hover:shadow-lg transition-shadow h-full">
-                <CardContent className="p-6">
+              <div className="border-none shadow-md hover:shadow-lg transition-shadow h-full">
+                <divContent className="p-6">
                   <div className="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center mb-4">
                     <skill.icon className="w-6 h-6 text-blue-600" />
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-2">{skill.title}</h3>
                   <p className="text-gray-600">{skill.description}</p>
-                </CardContent>
-              </Card>
+                </div>
+              </div>
             </motion.div>
           ))}
         </div>

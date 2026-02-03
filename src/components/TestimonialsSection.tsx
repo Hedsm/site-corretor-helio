@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Card, CardContent } from '@/components/ui/card';
+// Card components replaced
 import { ChevronLeft, ChevronRight, Star } from 'lucide-react';
 
 const testimonials = [
@@ -103,8 +103,8 @@ export default function TestimonialsSection() {
               exit={{ opacity: 0, x: -50 }}
               transition={{ duration: 0.5 }}
             >
-              <Card className="border-none shadow-xl">
-                <CardContent className="p-8 md:p-12 flex flex-col md:flex-row items-center gap-8">
+              <div className="border-none shadow-xl">
+                <divContent className="p-8 md:p-12 flex flex-col md:flex-row items-center gap-8">
                   <div className="w-32 h-32 md:w-48 md:h-48 rounded-full overflow-hidden flex-shrink-0 border-4 border-blue-100">
                     <img
                       src={testimonials[currentIndex].image}
@@ -123,8 +123,8 @@ export default function TestimonialsSection() {
                     </p>
                     <h4 className="text-lg font-bold text-gray-900">{testimonials[currentIndex].name}</h4>
                   </div>
-                </CardContent>
-              </Card>
+                </div>
+              </div>
             </motion.div>
           </AnimatePresence>
 

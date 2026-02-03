@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Card, CardContent } from '@/components/ui/card';
+// Card components replaced
 import { ChevronDown } from 'lucide-react';
 
 const faqs = [
@@ -54,7 +54,7 @@ export default function FAQSection() {
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: index * 0.1 }}
             >
-              <Card className="border border-gray-200 shadow-sm overflow-hidden">
+              <div className="border border-gray-200 shadow-sm overflow-hidden">
                 <button
                   className="w-full p-6 text-left flex justify-between items-center hover:bg-gray-50 transition-colors"
                   onClick={() => setOpenIndex(openIndex === index ? null : index)}
@@ -63,11 +63,11 @@ export default function FAQSection() {
                   <ChevronDown className={`w-5 h-5 text-gray-500 transition-transform ${openIndex === index ? 'rotate-180' : ''}`} />
                 </button>
                 {openIndex === index && (
-                  <CardContent className="p-6 pt-0 text-gray-600 border-t border-gray-100">
+                  <divContent className="p-6 pt-0 text-gray-600 border-t border-gray-100">
                     {faq.answer}
-                  </CardContent>
+                  </div>
                 )}
-              </Card>
+              </div>
             </motion.div>
           ))}
         </div>
