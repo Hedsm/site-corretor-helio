@@ -76,7 +76,7 @@ export default function PropertiesSection() {
                     {property.status}
                   </div>
                 </div>
-                <divContent className="p-6 flex-1 flex flex-col">
+                <div className="p-6 flex-1 flex flex-col">
                   <div className="flex items-center text-gray-500 text-sm mb-2">
                     <MapPin className="w-4 h-4 mr-1" />
                     {property.location}

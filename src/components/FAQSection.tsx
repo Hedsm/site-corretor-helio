@@ -63,7 +63,7 @@ export default function FAQSection() {
                   <ChevronDown className={`w-5 h-5 text-gray-500 transition-transform ${openIndex === index ? 'rotate-180' : ''}`} />
                 </button>
                 {openIndex === index && (
-                  <divContent className="p-6 pt-0 text-gray-600 border-t border-gray-100">
+                  <div className="p-6 pt-0 text-gray-600 border-t border-gray-100">
                     {faq.answer}
                   </div>
                 )}

@@ -104,7 +104,7 @@ export default function TestimonialsSection() {
               transition={{ duration: 0.5 }}
             >
               <div className="border-none shadow-xl">
-                <divContent className="p-8 md:p-12 flex flex-col md:flex-row items-center gap-8">
+                <div className="p-8 md:p-12 flex flex-col md:flex-row items-center gap-8">
                   <div className="w-32 h-32 md:w-48 md:h-48 rounded-full overflow-hidden flex-shrink-0 border-4 border-blue-100">
                     <img
                       src={testimonials[currentIndex].image}

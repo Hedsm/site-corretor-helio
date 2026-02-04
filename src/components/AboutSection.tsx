@@ -63,7 +63,7 @@ export default function AboutSection() {
               transition={{ delay: index * 0.1 }}
             >
               <div className="border-none shadow-md hover:shadow-lg transition-shadow h-full">
-                <divContent className="p-6">
+                <div className="p-6">
                   <div className="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center mb-4">
                     <skill.icon className="w-6 h-6 text-blue-600" />
                   </div>

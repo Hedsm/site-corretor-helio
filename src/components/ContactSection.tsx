@@ -135,7 +135,7 @@ export default function ContactSection() {
                    <divTrigger>
                      <divValue placeholder="Selecione o tipo de imóvel" />
                    </div>
-                   <divContent>
+                   <div>
                      <divItem value="apartamento">Apartamento </div>
                      <divItem value="casa">Casa Verde e Amarela </div>
                      <divItem value="terreno">Terreno / Loteamento </div>

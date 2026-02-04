@@ -55,7 +55,7 @@ export default function LegalServicesSection() {
               transition={{ delay: index * 0.2 }}
             >
               <div className="border-none shadow-lg h-full">
-                <divContent className="p-8">
+                <div className="p-8">
                   <div className="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center mb-6">
                     <service.icon className="w-8 h-8 text-blue-600" />
                   </div>
