@@ -132,14 +132,14 @@ export default function ContactSection() {
                  <div
                   onValueChange={(value) => setFormData({ ...formData, propertyInterest: value })}
                 >
-                   <divTrigger>
-                     <divValue placeholder="Selecione o tipo de imóvel" />
+                   <div>
+                     <div placeholder="Selecione o tipo de imóvel" />
                    </div>
                    <div>
-                     <divItem value="apartamento">Apartamento </div>
-                     <divItem value="casa">Casa Verde e Amarela </div>
-                     <divItem value="terreno">Terreno / Loteamento </div>
-                     <divItem value="comercial">Comercial </div>
+                     <div value="apartamento">Apartamento </div>
+                     <div value="casa">Casa Verde e Amarela </div>
+                     <div value="terreno">Terreno / Loteamento </div>
+                     <div value="comercial">Comercial </div>
                    </div>
                  </div>
               </div>
